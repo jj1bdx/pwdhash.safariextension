@@ -13,10 +13,13 @@
  * Initialize page with default hashing parameters.
  */
 function Init() {
-  document.hashform.domain.value = "http://www.example.com/";
+  document.hashform.domain.value = "";
   document.hashform.sitePassword.value = "";
   document.hashform.hashedPassword.value = "Press Generate";
   document.hashform.hashedPassword.disabled = true;
+
+  // Setup event listener to fire when popover is shown
+  safari.application.addEventListener("popover", PopoverHandler, true);
 }
 
 var SPH_kPasswordPrefix = "@@";
@@ -43,4 +46,12 @@ function GenerateToTextField()
 {
   document.hashform.hashedPassword.value = Generate();
   document.hashform.hashedPassword.disabled = false;
+}
+
+/*
+ * Update site address textfield with the current tab's URL
+ */
+function PopoverHandler()
+{
+  document.hashform.domain.value = safari.application.activeBrowserWindow.activeTab.url;
 }
