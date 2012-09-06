@@ -49,9 +49,9 @@ function GenerateToTextField()
 }
 
 /*
- * Update site address textfield with the current tab's URL
+ * Update site address textfield with the current tab's domain
  */
 function PopoverHandler()
 {
-  document.hashform.domain.value = safari.application.activeBrowserWindow.activeTab.url;
+  document.hashform.domain.value = (new SPH_DomainExtractor()).extractDomain(safari.application.activeBrowserWindow.activeTab.url);
 }
