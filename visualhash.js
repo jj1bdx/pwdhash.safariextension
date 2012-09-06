@@ -1,3 +1,5 @@
+// Taken from https://github.com/mozilla/watchdog-visualhash/blob/71615de48b80bdfad33aafe633cb2d52448be58e/Chrome/visualhash.js
+
 (function () {
 
   function attachToInputs(e) {

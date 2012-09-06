@@ -1,3 +1,5 @@
+// Taken from https://github.com/mozilla/watchdog-visualhash/blob/71615de48b80bdfad33aafe633cb2d52448be58e/Chrome/util.js
+
 // Thanks, http://www.quirksmode.org/js/findpos.html
 function findPos(obj) {
   var curleft = curtop = 0;
