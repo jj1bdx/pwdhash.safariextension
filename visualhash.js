@@ -30,7 +30,7 @@
                 restoreBackgroundColor(elem);
                 return;
             }
-            var passwordHash = SHA1(elem.value);
+            var passwordHash = hex_md5(elem.value);
             var elemWidth = Math.max(elem.clientWidth,elem.offsetWidth);
             var elemHeight = Math.max(elem.clientHeight,elem.offsetHeight);
             elem.style['backgroundImage'] = 'url(' + getDataURLForHash(passwordHash,elemWidth,elemHeight) + ')';
