@@ -85,6 +85,12 @@ div.footer
   text-align: center;
 }
 
+input[name='hashedPassword']
+{
+  font-family: monospace;
+}
+
+
 #theToggleModeLink
 {
   font-size: xx-small;
