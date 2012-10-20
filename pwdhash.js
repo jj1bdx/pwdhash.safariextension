@@ -46,6 +46,8 @@ function GenerateToTextField()
 {
   document.hashform.hashedPassword.value = Generate();
   document.hashform.hashedPassword.disabled = false;
+  document.hashform.hashedPassword.focus();
+  document.hashform.hashedPassword.select();
   document.hashform.sitePassword.value = '';
 }
 
